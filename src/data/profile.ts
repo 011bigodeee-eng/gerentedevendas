@@ -36,10 +36,10 @@ export const profile = {
   aboutPhoto: '/images/marcos/retrato-detalhe-alta.jpg',
   recognitionPhoto: '/images/marcos/reconhecimento-alta.jpg',
   gallery: [
-    { src: '/images/marcos/trabalho-tablet-alta.jpg', alt: 'Marcus Vinicius utilizando um tablet', caption: 'Perspectiva e atenção', position: 'center 20%' },
-    { src: '/images/marcos/retrato-externo-alta.jpg', alt: 'Marcus Vinicius de terno cinza em ambiente externo', caption: 'Presença profissional', position: 'center 22%' },
-    { src: '/images/marcos/retrato-profissional-alta.jpg', alt: 'Marcus Vinicius de terno azul em ambiente externo', caption: 'Conexões e oportunidades', position: 'center 18%' },
-    { src: '/images/marcos/bastidores-alta.jpg', alt: 'Marcus Vinicius em um ambiente de trabalho', caption: 'Nos bastidores', position: 'center 14%' },
+    { src: '/images/marcos/trabalho-tablet-alta.jpg', alt: 'Marcus Vinicius utilizando um tablet', caption: 'Perspectiva e atenção', width: 958, height: 1608 },
+    { src: '/images/marcos/retrato-externo-alta.jpg', alt: 'Marcus Vinicius de terno cinza em ambiente externo', caption: 'Presença profissional', width: 1198, height: 1720 },
+    { src: '/images/marcos/retrato-profissional-alta.jpg', alt: 'Marcus Vinicius de terno azul em ambiente externo', caption: 'Conexões e oportunidades', width: 876, height: 1624 },
+    { src: '/images/marcos/bastidores-alta.jpg', alt: 'Marcus Vinicius em um ambiente de trabalho', caption: 'Nos bastidores', width: 958, height: 1482 },
   ],
   about: {
     introduction: 'Marcus Vinicius é gerente de vendas com atuação em soluções de crédito. Sua apresentação profissional reúne mais de R$ 74,8 milhões em créditos comercializados.',

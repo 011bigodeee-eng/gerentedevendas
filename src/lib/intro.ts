@@ -1,4 +1,4 @@
 export const INTRO_SESSION_KEY = 'marcus-intro-seen-v1';
 
 // Runs in the document head before page content can paint.
-export const introBootstrap = `(function(){var skip=window.matchMedia('(prefers-reduced-motion: reduce)').matches;try{skip=skip||sessionStorage.getItem('${INTRO_SESSION_KEY}')==='1';}catch(e){}document.documentElement.setAttribute('data-intro-state',skip?'skip':'pending');})();`;
+export const introBootstrap = `(function(){if('scrollRestoration' in history){history.scrollRestoration='manual';}var interacted=false;function markInteraction(){interacted=true;}['touchstart','wheel','keydown'].forEach(function(type){window.addEventListener(type,markInteraction,{once:true,passive:true});});function startAtTop(){if(!location.hash&&!interacted){window.scrollTo({top:0,left:0,behavior:'instant'});}}window.addEventListener('pageshow',function(){startAtTop();requestAnimationFrame(startAtTop);},{once:true});var skip=window.matchMedia('(prefers-reduced-motion: reduce)').matches;try{skip=skip||sessionStorage.getItem('${INTRO_SESSION_KEY}')==='1';}catch(e){}document.documentElement.setAttribute('data-intro-state',skip?'skip':'pending');})();`;

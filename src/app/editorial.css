@@ -137,6 +137,7 @@ footer > p, footer > a:not(.brand), .footer-bottom { font-size: 12px; line-heigh
   .method-copy .tiny-label { font-size: 10px; }
   .method-navigation button { font-size: 12px; }
   .gallery-editorial .photo-gallery { gap: 17px; }
+  .gallery-editorial .photo-gallery .gallery-image { aspect-ratio: var(--photo-ratio); }
   .gallery-editorial .photo-gallery > div:nth-child(even) { padding-top: 28px; }
   .gallery-editorial figcaption { font-size: 12px; gap: 8px; }
   .editorial-disclosure > summary { font-size: 17px; padding: 22px 0; gap: 20px; }

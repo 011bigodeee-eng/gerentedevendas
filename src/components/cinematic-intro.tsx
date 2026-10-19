@@ -41,7 +41,7 @@ export default function CinematicIntro() {
     const timer = window.setTimeout(finish, 3900);
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') finish();
-      if (event.key === 'Tab') { event.preventDefault(); skipRef.current?.focus(); }
+      if (event.key === 'Tab') { event.preventDefault(); skipRef.current?.focus({ preventScroll: true }); }
     };
     window.addEventListener('keydown', onKey);
     return () => {

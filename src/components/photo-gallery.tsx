@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { type CSSProperties, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight, Expand, X } from 'lucide-react';
 import { profile } from '@/data/profile';
@@ -25,7 +25,7 @@ export default function PhotoGallery() {
 
   return <>
     <div className="photo-gallery">{profile.gallery.map((item, index) => <Reveal key={item.src} delay={(index % 4) * .06}><figure>
-      <button className="gallery-image" onClick={() => setSelected(index)} aria-label={`Ampliar: ${item.alt}`}><Image src={item.src} alt={item.alt} fill quality={90} style={{ objectPosition: item.position }} sizes="(max-width: 760px) 43vw, (min-width: 1920px) 430px, 22vw" /><span className="gallery-expand"><Expand size={18} /></span></button>
+      <button className="gallery-image" style={{ '--photo-ratio': `${item.width} / ${item.height}` } as CSSProperties} onClick={() => setSelected(index)} aria-label={`Ampliar: ${item.alt}`}><Image src={item.src} alt={item.alt} fill quality={90} style={{ objectPosition: 'center' }} sizes="(max-width: 760px) 43vw, (min-width: 1920px) 430px, 22vw" /><span className="gallery-expand"><Expand size={18} /></span></button>
       <figcaption><span>0{index + 1}</span>{item.caption}</figcaption>
     </figure></Reveal>)}</div>
     <dialog ref={dialog} className="photo-dialog" aria-labelledby="photo-caption" onClose={() => setSelected(null)} onCancel={() => setSelected(null)} onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }} onKeyDown={event => {
