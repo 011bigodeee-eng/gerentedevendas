@@ -26,7 +26,9 @@ export const profile = {
   name: 'Marcus Vinicius', role: 'Gerente de Vendas',
   headline: 'Transformando\nestratégia comercial\nem resultados.',
   description: 'Clareza para decidir. Direção para liderar. Estratégia para transformar o potencial da sua operação comercial em crescimento consistente.',
-  whatsapp: '', email: '', linkedin: '',
+  // Volume informado pelo usuário a partir da bio; período não fornecido.
+  creditBio: { volume: '+ R$ 74,8 milhões', label: 'em créditos comercializados', callToAction: 'Faça sua simulação abaixo' },
+  whatsapp: '5512996393742', email: '', linkedin: '',
   photoPosition: 'center 8%',
   aboutPhotoPosition: 'center 8%',
   photo: '/images/marcos/retrato-principal.jpg', // Fotografia autorizada pelo titular
@@ -39,7 +41,7 @@ export const profile = {
     { src: '/images/marcos/bastidores-alta.jpg', alt: 'Marcus Vinicius em um ambiente de trabalho', caption: 'Nos bastidores', position: 'center 14%' },
   ],
   about: {
-    introduction: 'Vender começa com entender. Liderar começa com ouvir. Uma operação comercial consistente conecta essas duas perspectivas com clareza e intenção.',
+    introduction: 'Marcus Vinicius é gerente de vendas com atuação em soluções de crédito. Sua apresentação profissional reúne mais de R$ 74,8 milhões em créditos comercializados.',
     vision: 'Uma proposta de trabalho que aproxima pessoas, prioridades e decisões. Este conteúdo editorial deve ser validado com Marcus antes de ser apresentado como sua visão profissional definitiva.',
     differentiators: ['Clareza nas decisões', 'Pessoas no centro', 'Consistência na execução'],
     trajectory: [
