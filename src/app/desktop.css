@@ -1,0 +1,44 @@
+/* Expand the approved composition only on large desktop screens. */
+@media (min-width: 1441px) {
+  header,
+  .hero,
+  .ticker,
+  .section,
+  footer {
+    max-width: 1920px;
+    padding-inline: clamp(48px, 4vw, 80px);
+  }
+
+  .hero {
+    padding-top: clamp(56px, 4vw, 76px);
+    grid-template-columns: 1.15fr 1fr;
+    column-gap: clamp(35px, 3vw, 60px);
+  }
+
+  .hero h1 {
+    font-size: clamp(68px, 4.5vw, 86px);
+    letter-spacing: -3.6px;
+  }
+
+  .hero-content > p {
+    max-width: 540px;
+    font-size: 16px;
+  }
+
+  .hero-art.has-photo {
+    min-height: clamp(540px, 32vw, 660px);
+    margin-top: 0;
+  }
+
+  .hero-art.has-photo .hero-photo {
+    object-position: center 10%;
+  }
+
+  .hero-bottom {
+    margin-top: 40px;
+  }
+
+  .section-heading > p {
+    max-width: 410px;
+  }
+}
