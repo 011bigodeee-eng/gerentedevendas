@@ -28,15 +28,15 @@ export const profile = {
   description: 'Clareza para decidir. Direção para liderar. Estratégia para transformar o potencial da sua operação comercial em crescimento consistente.',
   whatsapp: '', email: '', linkedin: '',
   photoPosition: 'center 8%',
-  aboutPhotoPosition: 'center 16%',
+  aboutPhotoPosition: 'center 8%',
   photo: '/images/marcos/retrato.jpg', // Fotografia autorizada pelo titular
-  aboutPhoto: '/images/marcos/retrato-detalhe.png',
+  aboutPhoto: '/images/marcos/retrato-detalhe-alta.jpg',
   recognitionPhoto: '/images/marcos/reconhecimento.png',
   gallery: [
-    { src: '/images/marcos/trabalho-tablet.png', alt: 'Marcus Vinicius utilizando um tablet', caption: 'Perspectiva e atenção', position: 'center 20%' },
-    { src: '/images/marcos/retrato-externo.png', alt: 'Marcus Vinicius de terno cinza em ambiente externo', caption: 'Presença profissional', position: 'center 22%' },
-    { src: '/images/marcos/retrato-profissional.png', alt: 'Marcus Vinicius de terno azul em ambiente externo', caption: 'Conexões e oportunidades', position: 'center 18%' },
-    { src: '/images/marcos/bastidores.png', alt: 'Marcus Vinicius em um ambiente de trabalho', caption: 'Nos bastidores', position: 'center 14%' },
+    { src: '/images/marcos/trabalho-tablet-alta.jpg', alt: 'Marcus Vinicius utilizando um tablet', caption: 'Perspectiva e atenção', position: 'center 20%' },
+    { src: '/images/marcos/retrato-externo-alta.jpg', alt: 'Marcus Vinicius de terno cinza em ambiente externo', caption: 'Presença profissional', position: 'center 22%' },
+    { src: '/images/marcos/retrato-profissional-alta.jpg', alt: 'Marcus Vinicius de terno azul em ambiente externo', caption: 'Conexões e oportunidades', position: 'center 18%' },
+    { src: '/images/marcos/bastidores-alta.jpg', alt: 'Marcus Vinicius em um ambiente de trabalho', caption: 'Nos bastidores', position: 'center 14%' },
   ],
   about: {
     introduction: 'Vender começa com entender. Liderar começa com ouvir. Uma operação comercial consistente conecta essas duas perspectivas com clareza e intenção.',
