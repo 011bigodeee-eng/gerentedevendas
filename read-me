@@ -1,0 +1,42 @@
+# Marcus Vinicius | Site Institucional Premium
+
+Site institucional desenvolvido para Marcus Vinicius, gerente comercial com atuação em soluções de crédito.
+
+## Sobre o projeto
+
+O objetivo é apresentar os serviços, fortalecer a presença digital e facilitar o contato de potenciais clientes interessados em simulações de crédito.
+
+## Tecnologias
+
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Three.js
+- Lucide React
+
+## Páginas do site
+
+- Início
+- Sobre
+- Soluções de Crédito
+- Simulador de Crédito
+- Resultados
+- Conteúdos
+- Contato
+
+## Funcionalidades
+
+- Design premium em preto e dourado
+- Animações 3D e efeitos cinematográficos
+- Navegação entre páginas
+- Simulador de solicitação de crédito
+- Integração com WhatsApp
+- Layout responsivo
+- Otimização para SEO
+
+## Desenvolvimento
+
+Projeto desenvolvido pela ALTIVOX.
+
+**Status:** Em desenvolvimento.
