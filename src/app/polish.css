@@ -68,3 +68,13 @@
 @media (prefers-reduced-motion: reduce) {
   .gallery-image:hover img { transform: none; }
 }
+
+/* Preserve the full portrait, including hands and watch, at its native ratio. */
+.about .full-portrait {
+  min-height: 0;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 976 / 1560;
+  justify-self: center;
+  padding: 0;
+}
