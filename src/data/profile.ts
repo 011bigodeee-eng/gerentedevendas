@@ -33,7 +33,7 @@ export const profile = {
   aboutPhotoPosition: 'center 8%',
   photo: '/images/marcos/retrato-principal.jpg', // Fotografia autorizada pelo titular
   aboutPhoto: '/images/marcos/retrato-detalhe-alta.jpg',
-  recognitionPhoto: '/images/marcos/reconhecimento.png',
+  recognitionPhoto: '/images/marcos/reconhecimento-alta.jpg',
   gallery: [
     { src: '/images/marcos/trabalho-tablet-alta.jpg', alt: 'Marcus Vinicius utilizando um tablet', caption: 'Perspectiva e atenção', position: 'center 20%' },
     { src: '/images/marcos/retrato-externo-alta.jpg', alt: 'Marcus Vinicius de terno cinza em ambiente externo', caption: 'Presença profissional', position: 'center 22%' },
