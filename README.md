@@ -98,3 +98,7 @@ O bootstrap de `src/lib/intro.ts` verifica sessão e movimento reduzido no cabe�
 ## Paleta azul-marinho
 
 A interface usa base azul-marinho `#060e1c`, painéis `#0b1b32`, ações em azul `#174b88` e destaques legíveis `#8bb8ff`. Os tokens finais e estados dos botões ficam em `src/app/theme.css`. Gráficos, ícone, luzes e abertura acompanham a paleta. As fotografias autorizadas permanecem com suas cores originais.
+
+## Navegação com identidade própria
+
+O cabeçalho fica em `src/components/site-header.tsx` e os estilos em `src/app/navigation.css`: monograma MV, índice numerado, destaque da seção em leitura e chamada para simular crédito. No celular, o painel abre pelo botão Menu, direciona o foco para o primeiro link e fecha por Escape, escolha de seção ou toque fora. O botão Simular crédito seleciona esse assunto no formulário. A navegação foi conferida de 320 a 1920 px, com teclado e auditoria automatizada de acessibilidade.
