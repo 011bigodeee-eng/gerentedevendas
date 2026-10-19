@@ -90,3 +90,7 @@ Os cantos e espaçamentos ficam em `src/app/polish.css`. Os números dos desafio
 O componente `src/components/reveal.tsx` reapresenta os elementos ao entrarem na área visível, com deslocamento, escala e opacidade suaves. O efeito é desativado por preferência de movimento reduzido e o conteúdo permanece visível no HTML sem JavaScript.
 
 A qualidade de exibição do Next Image é 90 nas fotografias e 95 na ampliação da galeria. Os arquivos originais não foram alterados: compressão menor não recupera detalhes ausentes nas capturas fornecidas. O enquadramento está centralizado em configurações editáveis: `photoPosition`, `aboutPhotoPosition` e `gallery[].position` em `src/data/profile.ts`. A ampliação mantém a foto inteira com `contain`.
+
+## Primeira renderização da abertura
+
+O bootstrap de `src/lib/intro.ts` verifica sessão e movimento reduzido no cabeçalho do documento, antes da primeira pintura. `src/app/intro-loading.css` mantém a cobertura inicial até a abertura estar pronta; a sequência começa após a hidratação, sem mostrar a página antes. Visitas já marcadas na sessão e preferências de movimento reduzido pulam a abertura antes da pintura. Sem JavaScript, o conteúdo do site permanece acessível pelo fallback `noscript`.

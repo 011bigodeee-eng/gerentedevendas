@@ -1,0 +1,16 @@
+/* Cover the first paint while the interactive intro is being hydrated. */
+html[data-intro-state='pending']::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 210;
+  background: #040509;
+}
+html[data-intro-state='skip'] .cinematic-intro { display: none; }
+.cinematic-intro:not(.is-playing),
+.cinematic-intro:not(.is-playing) * {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-intro-state='pending']::before { display: none; }
+}
