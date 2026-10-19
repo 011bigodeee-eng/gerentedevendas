@@ -1,3 +1,13 @@
+export type Testimonial = { quote: string; name: string; role: string; authorized: boolean };
+export type PortfolioProject = {
+  title: string;
+  category: string;
+  text: string;
+  demo: boolean;
+  image: string | null;
+  structure: string[][];
+};
+
 export type CommercialMetric = {
   label: string;
   description: string;
@@ -26,6 +36,33 @@ export const profile = {
     { src: '/images/marcos/retrato-profissional.png', alt: 'Marcus Vinicius de terno azul em ambiente externo', caption: 'Conexões e oportunidades' },
     { src: '/images/marcos/bastidores.png', alt: 'Marcus Vinicius em um ambiente de trabalho', caption: 'Nos bastidores' },
   ],
+  about: {
+    introduction: 'Vender começa com entender. Liderar começa com ouvir. Uma operação comercial consistente conecta essas duas perspectivas com clareza e intenção.',
+    vision: 'Uma proposta de trabalho que aproxima pessoas, prioridades e decisões. Este conteúdo editorial deve ser validado com Marcus antes de ser apresentado como sua visão profissional definitiva.',
+    differentiators: ['Clareza nas decisões', 'Pessoas no centro', 'Consistência na execução'],
+    trajectory: [
+      { label: 'Experiência', title: 'Uma trajetória a apresentar', text: 'Adicionar funções, setores e períodos de atuação confirmados por Marcus.' },
+      { label: 'Desenvolvimento', title: 'Aprendizado em perspectiva', text: 'Adicionar formação e qualificações verificadas, sem atribuir certificações não fornecidas.' },
+      { label: 'Direção', title: 'O próximo capítulo', text: 'Apresentar os objetivos profissionais e as formas de atuação após alinhamento com Marcus.' },
+    ],
+  },
+  challenges: [
+    { title: 'Vendas sem um processo claro', question: 'Cada negociação segue um caminho diferente?', direction: 'Mapear as etapas da venda, definir responsabilidades e construir uma rotina comercial compartilhada.', topic: 'Gestão comercial' },
+    { title: 'Metas e indicadores desconectados', question: 'A equipe sabe o que acompanhar e por quê?', direction: 'Conectar objetivos a indicadores compreensíveis e criar momentos de revisão das prioridades.', topic: 'Metas e planejamento' },
+    { title: 'Oportunidades que não convertem', question: 'As conversas avançam, mas as decisões não?', direction: 'Observar a qualificação, os pontos de perda e a consistência do acompanhamento das oportunidades.', topic: 'Análise de indicadores' },
+    { title: 'Uma equipe sem alinhamento', question: 'As pessoas trabalham muito, mas em direções diferentes?', direction: 'Organizar rituais de comunicação, acordos de execução e desenvolvimento das pessoas.', topic: 'Liderança e equipes' },
+    { title: 'Um funil difícil de acompanhar', question: 'Falta visibilidade sobre o próximo passo de cada oportunidade?', direction: 'Estruturar critérios de avanço e uma visão compartilhada do pipeline comercial.', topic: 'Estruturação de processos' },
+    { title: 'Resultados sem acompanhamento', question: 'Os números aparecem só no fechamento do período?', direction: 'Construir uma cadência de análise para identificar sinais, aprender e ajustar a rota.', topic: 'Análise de indicadores' },
+  ],
+  indicatorDemo: {
+    note: 'Dados fictícios para demonstrar a leitura do painel. Não representam resultados, clientes ou desempenho de Marcus Vinicius.',
+    periods: ['Ciclo 01', 'Ciclo 02', 'Ciclo 03', 'Ciclo 04', 'Ciclo 05', 'Ciclo 06'],
+    series: [
+      { label: 'Conversão', unit: '%', values: [18, 24, 21, 32, 29, 38] },
+      { label: 'Oportunidades', unit: 'oportunidades', values: [30, 45, 38, 56, 49, 65] },
+    ],
+  },
+  testimonials: [] as Testimonial[], // Somente depoimentos reais e autorizados.
   methodology: [
     { title: 'Diagnóstico', description: 'Antes de propor uma direção, entender o terreno. Uma leitura conjunta do cenário comercial, dos processos e das pessoas.', actions: ['Ouvir o contexto e os objetivos', 'Mapear o funil e a rotina comercial', 'Identificar obstáculos e oportunidades'], output: 'Um cenário mais claro para decidir.' },
     { title: 'Planejamento', description: 'Transformar o diagnóstico em prioridades. Definir um caminho possível, conectado ao momento e aos recursos da operação.', actions: ['Alinhar prioridades e responsabilidades', 'Definir objetivos e indicadores', 'Organizar o plano de ação'], output: 'Prioridades traduzidas em próximos passos.' },
@@ -41,17 +78,17 @@ export const profile = {
     { label: 'Desenvolvimento', description: 'Evolução, alinhamento e aprendizado da equipe.', value: null, period: '', source: '' },
   ] satisfies CommercialMetric[],
   specialties: [
-    { title: 'Gestão comercial', text: 'Uma visão integrada de pessoas, processos e oportunidades para orientar o próximo passo.' },
-    { title: 'Desenvolvimento de equipes', text: 'Alinhamento, comunicação e autonomia para construir uma equipe preparada.' },
-    { title: 'Planejamento de vendas', text: 'Prioridades claras e um plano de ação conectado aos objetivos do negócio.' },
-    { title: 'Análise de indicadores', text: 'Leitura do que importa para apoiar decisões com mais contexto.' },
-    { title: 'Estruturação de processos', text: 'Organização do funil e rotinas comerciais que dão consistência à operação.' },
-    { title: 'Treinamento comercial', text: 'Desenvolvimento de habilidades para conversas e negociações mais relevantes.' },
+    { title: 'Gestão comercial', text: 'Uma visão integrada de pessoas, processos e oportunidades para orientar o próximo passo.', focus: 'Direção & rotina' },
+    { title: 'Liderança e equipes', text: 'Alinhamento, comunicação e autonomia para construir uma equipe preparada.', focus: 'Alinhamento & desenvolvimento' },
+    { title: 'Metas e planejamento', text: 'Prioridades claras e um plano de ação conectado aos objetivos do negócio.', focus: 'Objetivos & prioridades' },
+    { title: 'Análise de indicadores', text: 'Leitura do que importa para apoiar decisões com mais contexto.', focus: 'Leitura & decisão' },
+    { title: 'Estruturação de processos', text: 'Organização do funil e rotinas comerciais que dão consistência à operação.', focus: 'Funil & consistência' },
+    { title: 'Treinamento comercial', text: 'Desenvolvimento de habilidades para conversas e negociações mais relevantes.', focus: 'Habilidades & negociação' },
   ],
   cases: [
-    { title: 'Uma operação com mais direção.', category: 'PROCESSOS & GESTÃO', text: 'Espaço para um projeto de estruturação comercial, com contexto, ações e resultados verificados.', structure: [['Contexto', 'Descrever o cenário inicial e os desafios confirmados.'], ['Atuação', 'Documentar o escopo, as responsabilidades e as ações realizadas.'], ['Evidências', 'Inserir resultados com fonte, período e autorização.']] },
-    { title: 'Pessoas que evoluem juntas.', category: 'LIDERANÇA & DESENVOLVIMENTO', text: 'Espaço para uma experiência de desenvolvimento de equipe e seus aprendizados.', structure: [['Contexto', 'Apresentar a equipe e as necessidades identificadas, com autorização.'], ['Atuação', 'Descrever as iniciativas de alinhamento e desenvolvimento.'], ['Evidências', 'Adicionar aprendizados documentados e retornos autorizados.']] },
-  ],
+    { title: 'Uma operação com mais direção.', category: 'Processos e gestão', demo: true, image: null, text: 'Espaço para um projeto de estruturação comercial, com contexto, ações e resultados verificados.', structure: [['Contexto', 'Descrever o cenário inicial e os desafios confirmados.'], ['Atuação', 'Documentar o escopo, as responsabilidades e as ações realizadas.'], ['Evidências', 'Inserir resultados com fonte, período e autorização.']] },
+    { title: 'Pessoas que evoluem juntas.', category: 'Liderança e equipes', demo: true, image: null, text: 'Espaço para uma experiência de desenvolvimento de equipe e seus aprendizados.', structure: [['Contexto', 'Apresentar a equipe e as necessidades identificadas, com autorização.'], ['Atuação', 'Descrever as iniciativas de alinhamento e desenvolvimento.'], ['Evidências', 'Adicionar aprendizados documentados e retornos autorizados.']] },
+  ] satisfies PortfolioProject[],
   faqs: [
     ['Como podemos começar uma conversa?', 'Use os canais da seção de contato quando estiverem configurados. O primeiro passo será entender o contexto, os desafios e os objetivos da sua operação.'],
     ['Quais são as formas de atuação?', 'O formato será definido com Marcus Vinicius conforme o escopo e a disponibilidade. As áreas apresentadas neste site são propostas iniciais e precisam de confirmação.'],

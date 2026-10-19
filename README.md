@@ -52,3 +52,33 @@ As imagens autorizadas ficam em `public/images/marcos/`. Em `src/data/profile.ts
 As fotografias continuam com otimização e dimensionamento responsivo pelo Next Image; apenas o retrato de abertura tem prioridade e as demais imagens são carregadas sob demanda. A pilha de fontes é local, sem requisições externas. Nenhuma dependência foi adicionada ao projeto.
 
 Validação desta evolução: lint, build e TypeScript; Chromium em larguras 320, 390, 768, 1024 e 1440; metodologia, galeria, menu, FAQ, formulário e âncoras; conteúdo visível sem JavaScript; movimento reduzido; regras de publicação dos indicadores. Auditoria axe para WCAG A/AA 2.0 e 2.1 sem violações detectadas na página testada. A auditoria automatizada não substitui uma avaliação manual completa.
+
+## Seções editoriais e painel demonstrativo
+
+A primeira dobra e o cabeçalho aprovados foram preservados. Os novos estilos de `src/app/sections.css` atuam somente nas seções seguintes.
+
+Dados editáveis em `src/data/profile.ts`:
+
+- `about`: apresentação, visão, diferenciais e trajetória. Os textos de carreira continuam provisórios até receber dados verificados.
+- `challenges`: perguntas, caminhos possíveis de atuação e especialidade selecionada ao conversar.
+- `specialties`: título, descrição e foco do card.
+- `cases`: projetos com categoria, estrutura, imagem opcional e `demo`. Mantenha `demo: true` enquanto o conteúdo for apenas demonstração. Use imagens locais em `public/images/portfolio/`.
+- `indicatorDemo`: ciclos e séries fictícias do gráfico, sempre identificados na interface como demonstração. Essas séries não alimentam os resultados reais.
+- `indicators`: resultados reais opcionais, que exigem valor, período e fonte antes de serem exibidos.
+- `testimonials`: lista inicialmente vazia. Só itens com `authorized: true` aparecem. Cada item requer `quote`, `name` e `role`; adicionar somente relatos reais e autorizados.
+- `whatsapp`: número oficial em formato internacional; o site gera o link `wa.me` e prepara a mensagem. Vazio mantém o aviso de canal não configurado, sem enviar ou armazenar dados.
+
+### Roteiro de conferência
+
+1. Sobre: revisar os três blocos editáveis de trajetória; não há datas ou cargos inventados.
+2. Desafios: abrir uma pergunta e usar o link; a área correspondente fica selecionada no formulário.
+3. Especialidades: clicar na seta de um card e conferir a área de interesse no contato.
+4. Metodologia: selecionar etapas, usar anterior/próxima e testar setas, Home e End no teclado.
+5. Portfólio: usar os filtros e expandir a estrutura de cada projeto; os exemplos mantêm o selo de demonstração.
+6. Indicadores: trocar o indicador ilustrativo, expandir a tabela e conferir a identificação de dados fictícios. Os cards reais continuam sem valores até a configuração completa.
+7. Galeria: abrir uma imagem, usar os controles e setas do teclado, fechar com Escape e verificar a restauração do foco.
+8. Depoimentos: conferir o estado reservado sem frases ou nomes fictícios.
+9. FAQ: abrir e fechar perguntas com clique ou Enter.
+10. Contato: verificar validação de campos obrigatórios e o aviso explícito de não envio enquanto os canais não estiverem configurados.
+
+Conferir também o menu móvel e a opção de movimento reduzido do sistema. As fontes continuam locais e as fotos usam o Next Image; o gráfico é SVG e não requer biblioteca adicional.
