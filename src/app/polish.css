@@ -78,3 +78,10 @@
   justify-self: center;
   padding: 0;
 }
+
+.hero-portrait-frame { position: absolute; inset: 0; z-index: -2; }
+.hero-portrait-frame .hero-photo { z-index: auto; }
+@media (min-width: 761px) {
+  .hero-art.has-photo { background: radial-gradient(ellipse at 50% 35%, #29394e, #0b1420 85%); }
+  .hero-portrait-frame { inset-inline: 12%; mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
+}

@@ -29,7 +29,7 @@ export const profile = {
   whatsapp: '', email: '', linkedin: '',
   photoPosition: 'center 8%',
   aboutPhotoPosition: 'center 8%',
-  photo: '/images/marcos/retrato.jpg', // Fotografia autorizada pelo titular
+  photo: '/images/marcos/retrato-principal.jpg', // Fotografia autorizada pelo titular
   aboutPhoto: '/images/marcos/retrato-detalhe-alta.jpg',
   recognitionPhoto: '/images/marcos/reconhecimento.png',
   gallery: [
