@@ -82,3 +82,11 @@ Dados editáveis em `src/data/profile.ts`:
 10. Contato: verificar validação de campos obrigatórios e o aviso explícito de não envio enquanto os canais não estiverem configurados.
 
 Conferir também o menu móvel e a opção de movimento reduzido do sistema. As fontes continuam locais e as fotos usam o Next Image; o gráfico é SVG e não requer biblioteca adicional.
+
+## Fotos, cantos e animações de rolagem
+
+Os cantos e espaçamentos ficam em `src/app/polish.css`. Os números dos desafios têm 14 px, área de 36 px e pelo menos 21 px de distância da borda; o foco do teclado fica dentro do cabeçalho arredondado.
+
+O componente `src/components/reveal.tsx` reapresenta os elementos ao entrarem na área visível, com deslocamento, escala e opacidade suaves. O efeito é desativado por preferência de movimento reduzido e o conteúdo permanece visível no HTML sem JavaScript.
+
+A qualidade de exibição do Next Image é 90 nas fotografias e 95 na ampliação da galeria. Os arquivos originais não foram alterados: compressão menor não recupera detalhes ausentes nas capturas fornecidas. O enquadramento está centralizado em configurações editáveis: `photoPosition`, `aboutPhotoPosition` e `gallery[].position` em `src/data/profile.ts`. A ampliação mantém a foto inteira com `contain`.

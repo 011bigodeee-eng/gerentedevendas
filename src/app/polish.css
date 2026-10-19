@@ -1,0 +1,70 @@
+/* Soft corners, generous touch spacing and centered portrait framing. */
+:root { --radius-panel: 22px; --radius-card: 18px; --radius-control: 12px; }
+.hero-art.has-photo, .portrait, .recognition-image {
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+}
+.hero-art.has-photo .hero-photo { object-fit: cover; }
+.portrait { min-height: 560px; }
+.specialty, .metric-card, .demo-chart, .testimony-card,
+.testimonials .testimony-empty, .form-container, .project-visual {
+  border-radius: var(--radius-card);
+}
+.project-visual, .photo-gallery .gallery-image { overflow: hidden; }
+.button, .nav-contact, .portfolio-filters button, select,
+.viewer-controls > button, .viewer-close, .gallery-expand {
+  border-radius: var(--radius-control);
+}
+.photo-gallery .gallery-image { border-radius: var(--radius-card); }
+.photo-gallery .gallery-image { aspect-ratio: 3 / 4.4; }
+.photo-gallery .gallery-image img { object-fit: cover; }
+.photo-dialog { border-radius: var(--radius-panel); }
+.viewer-image { border-radius: 14px; overflow: hidden; }
+.method-tabs { border-radius: 18px 18px 0 0; overflow: hidden; }
+.method-navigation { border-radius: 0 0 18px 18px; }
+.method .method-tabs button > span { width: 36px; height: 36px; min-width: 36px; font-size: 12px; }
+.method-copy .tiny-label { font-size: 10px; }
+.card-top span, .project-index, .trajectory-index,
+.photo-gallery figcaption > span { font-size: 12px; font-variant-numeric: tabular-nums; }
+.metric-card { height: 100%; }
+.challenges .challenge-grid { gap: 18px; }
+.challenges .challenge { border: 1px solid #ffffff20; border-radius: var(--radius-card); background: #10151c; }
+.challenge details { border-radius: inherit; }
+.challenge summary { padding: 24px; min-height: 112px; gap: 16px; border-radius: 17px; }
+.challenge summary > span { font-size: 14px; font-weight: 600; min-width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; background: #f8793812; border: 1px solid #f8793835; }
+.challenge summary h3 { font-size: 16px; }
+.challenge summary > svg { margin-left: auto; flex-shrink: 0; }
+.challenge summary:focus-visible { outline-offset: -5px; }
+.challenge-answer { padding: 4px 26px 28px; }
+.challenge-answer > strong { font-size: 14px; }
+.challenge-answer > p { font-size: 13px; line-height: 1.9; }
+.challenge-answer .text-link { font-size: 12px; min-height: 44px; }
+.challenge details[open] { background: radial-gradient(ellipse at 0 0, #f879380c, transparent 70%), #111923; }
+.faq details { border: 1px solid #ffffff20; border-radius: 16px; margin-bottom: 12px; overflow: hidden; }
+.faq summary { padding: 23px; font-size: 15px; }
+.faq details > p { padding-inline: 23px; font-size: 13px; }
+.project-details { border-radius: 12px; }
+.project-details[open] { background: #ffffff03; padding-inline: 15px; }
+.chart-data { border-radius: 12px; }
+@media (max-width: 1120px) and (min-width: 761px) {
+  .challenges .challenge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .challenge summary { min-height: 120px; padding: 21px; }
+}
+@media (max-width: 760px) {
+  :root { --radius-panel: 20px; --radius-card: 16px; }
+  .portrait { min-height: 0; aspect-ratio: 3 / 4; }
+  .hero-art.has-photo { min-height: 0; aspect-ratio: 3 / 4; }
+  .challenges .challenge-grid { gap: 14px; }
+  .challenge summary { padding: 21px; min-height: 100px; gap: 13px; }
+  .challenge summary h3 { font-size: 15px; }
+  .challenge-answer { padding: 2px 22px 24px; }
+  .method .method-tabs button { min-height: 72px; padding-inline: 22px; }
+  .method .method-tabs button:before { left: 40px; }
+  .method-copy .tiny-label { font-size: 9px; }
+  .photo-gallery .gallery-image { aspect-ratio: 3 / 4.5; }
+  .faq summary { padding: 21px; font-size: 14px; }
+  .faq details > p { padding-inline: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-image:hover img { transform: none; }
+}

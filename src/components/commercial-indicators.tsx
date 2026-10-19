@@ -3,6 +3,7 @@
 import { useId, useState } from 'react';
 import { ArrowUpRight, ChartNoAxesCombined } from 'lucide-react';
 import { profile, verifiedMetricValue } from '@/data/profile';
+import Reveal from '@/components/reveal';
 
 export default function CommercialIndicators() {
   const [selected, setSelected] = useState(0);
@@ -12,7 +13,7 @@ export default function CommercialIndicators() {
   const points = series.values.map((value, index) => `${45 + index * (500 / Math.max(series.values.length - 1, 1))},${205 - value / max * 170}`).join(' ');
 
   return <div className="commercial-dashboard">
-    <div className="demo-chart">
+    <Reveal className="demo-chart">
       <div className="demo-chart-heading"><div><span className="demo-chart-badge">DEMONSTRAÇÃO · DADOS FICTÍCIOS</span><h3>Uma leitura do movimento.</h3></div><label>Indicador ilustrativo<select value={selected} onChange={event => setSelected(Number(event.target.value))}>{profile.indicatorDemo.series.map((item, index) => <option key={item.label} value={index}>{item.label}</option>)}</select></label></div>
       <p className="demo-chart-note">{profile.indicatorDemo.note}</p>
       <svg className="indicator-chart" viewBox="0 0 580 250" role="img" aria-labelledby={`${chartId}-title ${chartId}-description`}>
@@ -23,14 +24,14 @@ export default function CommercialIndicators() {
         {series.values.map((value, index) => <g key={index}><circle cx={45 + index * (500 / Math.max(series.values.length - 1, 1))} cy={205 - value / max * 170} r="4" fill="#ffb17b" /><text x={45 + index * (500 / Math.max(series.values.length - 1, 1))} y="235" textAnchor="middle">{profile.indicatorDemo.periods[index]}</text></g>)}
       </svg>
       <details className="chart-data"><summary>Ver dados de demonstração</summary><table><caption>{series.label} · dados fictícios ({series.unit})</caption><thead><tr><th scope="col">Ciclo ilustrativo</th><th scope="col">Valor fictício</th></tr></thead><tbody>{series.values.map((value, index) => <tr key={index}><th scope="row">{profile.indicatorDemo.periods[index]}</th><td>{value} {series.unit}</td></tr>)}</tbody></table></details>
-    </div>
+    </Reveal>
     <div className="metric-grid">{profile.indicators.map(item => {
       const value = verifiedMetricValue(item);
-      return <article className="metric-card" key={item.label}>
+      return <Reveal key={item.label}><article className="metric-card">
         <div className="metric-heading"><ChartNoAxesCombined size={20} /><span>{value === null ? 'INDICADOR DE ACOMPANHAMENTO' : 'DADO INFORMADO COM FONTE'}</span></div><h3>{item.label}</h3>
         {value !== null ? <><strong className="metric-value">{value}</strong><p className="metric-context">{item.period}<br />Fonte: {item.source}</p></> : <p>{item.description}</p>}
         <span className="metric-foot">{value === null ? 'Valor aguardando dados validados' : 'Resultado restrito ao contexto informado'}<ArrowUpRight size={15} /></span>
-      </article>;
+      </article></Reveal>;
     })}</div>
   </div>;
 }
