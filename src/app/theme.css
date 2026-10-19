@@ -1,0 +1,18 @@
+/* Navy foundation, blue highlights and readable action buttons. */
+:root {
+  --bg: #060e1c;
+  --panel: #0b1b32;
+  --ink: #edf4ff;
+  --muted: #abbace;
+  --accent: #8bb8ff;
+  --action: #174b88;
+  --action-hover: #205eaa;
+}
+.primary { background: var(--action); color: #fff; border-color: #6492cc55; }
+.primary:hover { background: var(--action-hover); }
+.floating-contact { background: var(--action); color: #fff; border: 1px solid #6492cc88; }
+.floating-contact:hover { background: var(--action-hover); }
+.credit-proof > strong { color: var(--ink); }
+header { background: linear-gradient(110deg, #060e1c, #0b1b32); }
+.hero-art.has-photo { background: radial-gradient(ellipse at 50% 35%, #233e62, #08162b 85%); }
+.cinematic-intro { background: #050c18; }

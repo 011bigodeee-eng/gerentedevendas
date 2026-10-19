@@ -18,10 +18,10 @@ export default function CommercialIndicators() {
       <p className="demo-chart-note">{profile.indicatorDemo.note}</p>
       <svg className="indicator-chart" viewBox="0 0 580 250" role="img" aria-labelledby={`${chartId}-title ${chartId}-description`}>
         <title id={`${chartId}-title`}>{`${series.label}: gráfico de demonstração`}</title><desc id={`${chartId}-description`}>{`Valores fictícios em ${series.unit}, sem relação com os resultados de Marcus. Os mesmos dados estão disponíveis na tabela abaixo.`}</desc>
-        <defs><linearGradient id={`${chartId}-fill`} x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#f87938" stopOpacity=".3" /><stop offset="100%" stopColor="#f87938" stopOpacity="0" /></linearGradient></defs>
+        <defs><linearGradient id={`${chartId}-fill`} x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#8bb8ff" stopOpacity=".3" /><stop offset="100%" stopColor="#8bb8ff" stopOpacity="0" /></linearGradient></defs>
         {[0, 1, 2, 3, 4].map(index => <g key={index}><line x1="45" x2="545" y1={205 - index * 42.5} y2={205 - index * 42.5} stroke="#ffffff15" strokeDasharray="3 6" /><text x="32" y={209 - index * 42.5} textAnchor="end">{Math.round(max * index / 4)}</text></g>)}
-        <polygon points={`45,205 ${points} 545,205`} fill={`url(#${chartId}-fill)`} /><polyline points={points} fill="none" stroke="#f87938" strokeWidth="2.5" strokeLinejoin="round" />
-        {series.values.map((value, index) => <g key={index}><circle cx={45 + index * (500 / Math.max(series.values.length - 1, 1))} cy={205 - value / max * 170} r="4" fill="#ffb17b" /><text x={45 + index * (500 / Math.max(series.values.length - 1, 1))} y="235" textAnchor="middle">{profile.indicatorDemo.periods[index]}</text></g>)}
+        <polygon points={`45,205 ${points} 545,205`} fill={`url(#${chartId}-fill)`} /><polyline points={points} fill="none" stroke="#8bb8ff" strokeWidth="2.5" strokeLinejoin="round" />
+        {series.values.map((value, index) => <g key={index}><circle cx={45 + index * (500 / Math.max(series.values.length - 1, 1))} cy={205 - value / max * 170} r="4" fill="#bdd7ff" /><text x={45 + index * (500 / Math.max(series.values.length - 1, 1))} y="235" textAnchor="middle">{profile.indicatorDemo.periods[index]}</text></g>)}
       </svg>
       <details className="chart-data"><summary>Ver dados de demonstração</summary><table><caption>{series.label} · dados fictícios ({series.unit})</caption><thead><tr><th scope="col">Ciclo ilustrativo</th><th scope="col">Valor fictício</th></tr></thead><tbody>{series.values.map((value, index) => <tr key={index}><th scope="row">{profile.indicatorDemo.periods[index]}</th><td>{value} {series.unit}</td></tr>)}</tbody></table></details>
     </Reveal>

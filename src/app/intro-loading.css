@@ -4,7 +4,7 @@ html[data-intro-state='pending']::before {
   position: fixed;
   inset: 0;
   z-index: 210;
-  background: #040509;
+  background: #050c18;
 }
 html[data-intro-state='skip'] .cinematic-intro { display: none; }
 .cinematic-intro:not(.is-playing),

@@ -28,10 +28,10 @@
 .photo-gallery figcaption > span { font-size: 12px; font-variant-numeric: tabular-nums; }
 .metric-card { height: 100%; }
 .challenges .challenge-grid { gap: 18px; }
-.challenges .challenge { border: 1px solid #ffffff20; border-radius: var(--radius-card); background: #10151c; }
+.challenges .challenge { border: 1px solid #ffffff20; border-radius: var(--radius-card); background: #0b1b32; }
 .challenge details { border-radius: inherit; }
 .challenge summary { padding: 24px; min-height: 112px; gap: 16px; border-radius: 17px; }
-.challenge summary > span { font-size: 14px; font-weight: 600; min-width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; background: #f8793812; border: 1px solid #f8793835; }
+.challenge summary > span { font-size: 14px; font-weight: 600; min-width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; background: #8bb8ff12; border: 1px solid #8bb8ff35; }
 .challenge summary h3 { font-size: 16px; }
 .challenge summary > svg { margin-left: auto; flex-shrink: 0; }
 .challenge summary:focus-visible { outline-offset: -5px; }
@@ -39,7 +39,7 @@
 .challenge-answer > strong { font-size: 14px; }
 .challenge-answer > p { font-size: 13px; line-height: 1.9; }
 .challenge-answer .text-link { font-size: 12px; min-height: 44px; }
-.challenge details[open] { background: radial-gradient(ellipse at 0 0, #f879380c, transparent 70%), #111923; }
+.challenge details[open] { background: radial-gradient(ellipse at 0 0, #8bb8ff0c, transparent 70%), #0d223b; }
 .faq details { border: 1px solid #ffffff20; border-radius: 16px; margin-bottom: 12px; overflow: hidden; }
 .faq summary { padding: 23px; font-size: 15px; }
 .faq details > p { padding-inline: 23px; font-size: 13px; }
@@ -90,7 +90,7 @@
 .credit-proof > strong { font-size: clamp(26px, 2.2vw, 36px); font-weight: 600; letter-spacing: -1px; color: #f6f0e9; }
 .credit-proof > span { font-size: 12px; color: #bec5ce; }
 .credit-proof > a { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; color: var(--accent); min-height: 36px; width: fit-content; }
-.credit-proof > a:hover { color: #ffb783; }
+.credit-proof > a:hover { color: #c2daff; }
 @media(max-width:760px) { .credit-proof { margin-top: 28px; } .credit-proof > a { min-height: 44px; } }
 
 /* Native touch and keyboard scrolling for the professional pillars. */
@@ -106,7 +106,7 @@
     scroll-padding-inline: 6vw;
     overscroll-behavior-x: contain;
     scrollbar-width: thin;
-    scrollbar-color: #f87938aa #11151a;
+    scrollbar-color: #8bb8ffaa #0b1b32;
     -webkit-overflow-scrolling: touch;
     gap: 24px;
     font-size: 10px;
@@ -114,7 +114,7 @@
   }
   .ticker > span { scroll-snap-align: start; }
   .ticker::-webkit-scrollbar { height: 3px; }
-  .ticker::-webkit-scrollbar-thumb { background: #f87938aa; border-radius: 4px; }
+  .ticker::-webkit-scrollbar-thumb { background: #8bb8ffaa; border-radius: 4px; }
   .pillars-hint { display: flex; align-items: center; justify-content: center; gap: 9px; color: #aeb6c3; font-size: 10px; padding: 12px 20px; }
   .pillars-hint svg { color: var(--accent); }
 }

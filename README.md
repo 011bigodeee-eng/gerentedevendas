@@ -94,3 +94,7 @@ A qualidade de exibição do Next Image é 90 nas fotografias e 95 na ampliaçã
 ## Primeira renderização da abertura
 
 O bootstrap de `src/lib/intro.ts` verifica sessão e movimento reduzido no cabeçalho do documento, antes da primeira pintura. `src/app/intro-loading.css` mantém a cobertura inicial até a abertura estar pronta; a sequência começa após a hidratação, sem mostrar a página antes. Visitas já marcadas na sessão e preferências de movimento reduzido pulam a abertura antes da pintura. Sem JavaScript, o conteúdo do site permanece acessível pelo fallback `noscript`.
+
+## Paleta azul-marinho
+
+A interface usa base azul-marinho `#060e1c`, painéis `#0b1b32`, ações em azul `#174b88` e destaques legíveis `#8bb8ff`. Os tokens finais e estados dos botões ficam em `src/app/theme.css`. Gráficos, ícone, luzes e abertura acompanham a paleta. As fotografias autorizadas permanecem com suas cores originais.
