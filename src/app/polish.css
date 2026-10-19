@@ -92,3 +92,29 @@
 .credit-proof > a { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; color: var(--accent); min-height: 36px; width: fit-content; }
 .credit-proof > a:hover { color: #ffb783; }
 @media(max-width:760px) { .credit-proof { margin-top: 28px; } .credit-proof > a { min-height: 44px; } }
+
+/* Native touch and keyboard scrolling for the professional pillars. */
+.ticker > svg { color: var(--accent); flex-shrink: 0; }
+.ticker:focus-visible { outline-offset: -4px; }
+.pillars-hint { display: none; }
+@media (max-width: 1120px) {
+  .ticker {
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 6vw;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #f87938aa #11151a;
+    -webkit-overflow-scrolling: touch;
+    gap: 24px;
+    font-size: 10px;
+    padding-block: 23px;
+  }
+  .ticker > span { scroll-snap-align: start; }
+  .ticker::-webkit-scrollbar { height: 3px; }
+  .ticker::-webkit-scrollbar-thumb { background: #f87938aa; border-radius: 4px; }
+  .pillars-hint { display: flex; align-items: center; justify-content: center; gap: 9px; color: #aeb6c3; font-size: 10px; padding: 12px 20px; }
+  .pillars-hint svg { color: var(--accent); }
+}
