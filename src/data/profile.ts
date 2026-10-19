@@ -24,8 +24,9 @@ export function verifiedMetricValue(metric: CommercialMetric): string | null {
 // Substitua os campos vazios por informações verificadas antes de publicar.
 export const profile = {
   name: 'Marcus Vinicius', role: 'Gerente de Vendas',
-  headline: 'Transformando\nestratégia comercial\nem resultados.',
-  description: 'Clareza para decidir. Direção para liderar. Estratégia para transformar o potencial da sua operação comercial em crescimento consistente.',
+  headline: 'Crédito com clareza.\nSeu próximo passo.',
+  headlineEmphasis: 'próximo passo.',
+  description: 'Cada objetivo pede uma conversa. Conheça Marcus Vinicius e solicite uma simulação de crédito para entender as possibilidades para o seu momento.',
   // Volume informado pelo usuário a partir da bio; período não fornecido.
   creditBio: { volume: '+ R$ 74,8 milhões', label: 'em créditos comercializados', callToAction: 'Faça sua simulação abaixo' },
   whatsapp: '5512996393742', email: '', linkedin: '',
@@ -42,8 +43,9 @@ export const profile = {
   ],
   about: {
     introduction: 'Marcus Vinicius é gerente de vendas com atuação em soluções de crédito. Sua apresentação profissional reúne mais de R$ 74,8 milhões em créditos comercializados.',
-    vision: 'Uma proposta de trabalho que aproxima pessoas, prioridades e decisões. Este conteúdo editorial deve ser validado com Marcus antes de ser apresentado como sua visão profissional definitiva.',
-    differentiators: ['Clareza nas decisões', 'Pessoas no centro', 'Consistência na execução'],
+    vision: 'Antes de decidir, vale entender o objetivo, os prazos e as condições. A conversa é o ponto de partida para solicitar uma simulação e esclarecer o próximo passo.',
+    differentiators: ['Seu objetivo', 'Informações claras', 'Uma conversa direta'],
+    showTrajectory: false,
     trajectory: [
       { label: 'Experiência', title: 'Uma trajetória a apresentar', text: 'Adicionar funções, setores e períodos de atuação confirmados por Marcus.' },
       { label: 'Desenvolvimento', title: 'Aprendizado em perspectiva', text: 'Adicionar formação e qualificações verificadas, sem atribuir certificações não fornecidas.' },
@@ -51,12 +53,9 @@ export const profile = {
     ],
   },
   challenges: [
-    { title: 'Vendas sem um processo claro', question: 'Cada negociação segue um caminho diferente?', direction: 'Mapear as etapas da venda, definir responsabilidades e construir uma rotina comercial compartilhada.', topic: 'Gestão comercial' },
-    { title: 'Metas e indicadores desconectados', question: 'A equipe sabe o que acompanhar e por quê?', direction: 'Conectar objetivos a indicadores compreensíveis e criar momentos de revisão das prioridades.', topic: 'Metas e planejamento' },
-    { title: 'Oportunidades que não convertem', question: 'As conversas avançam, mas as decisões não?', direction: 'Observar a qualificação, os pontos de perda e a consistência do acompanhamento das oportunidades.', topic: 'Análise de indicadores' },
-    { title: 'Uma equipe sem alinhamento', question: 'As pessoas trabalham muito, mas em direções diferentes?', direction: 'Organizar rituais de comunicação, acordos de execução e desenvolvimento das pessoas.', topic: 'Liderança e equipes' },
-    { title: 'Um funil difícil de acompanhar', question: 'Falta visibilidade sobre o próximo passo de cada oportunidade?', direction: 'Estruturar critérios de avanço e uma visão compartilhada do pipeline comercial.', topic: 'Estruturação de processos' },
-    { title: 'Resultados sem acompanhamento', question: 'Os números aparecem só no fechamento do período?', direction: 'Construir uma cadência de análise para identificar sinais, aprender e ajustar a rota.', topic: 'Análise de indicadores' },
+    { title: 'Por onde começar?', question: 'Comece pelo que você quer realizar.', direction: 'Compartilhe seu objetivo e o valor aproximado de que precisa. Isso ajuda a contextualizar o pedido de simulação.', topic: 'Simulação de crédito' },
+    { title: 'O que observar nas condições?', question: 'Olhe além do valor da parcela.', direction: 'Peça informações sobre prazo, custo total e condições aplicáveis antes de tomar uma decisão.', topic: 'Dúvidas sobre crédito' },
+    { title: 'Como dar o próximo passo?', question: 'Uma simulação ajuda a organizar a conversa.', direction: 'Entre em contato para confirmar as possibilidades disponíveis e as informações necessárias. A simulação não garante aprovação.', topic: 'Simulação de crédito' },
   ],
   indicatorDemo: {
     note: 'Dados fictícios para demonstrar a leitura do painel. Não representam resultados, clientes ou desempenho de Marcus Vinicius.',
@@ -68,11 +67,11 @@ export const profile = {
   },
   testimonials: [] as Testimonial[], // Somente depoimentos reais e autorizados.
   methodology: [
-    { title: 'Diagnóstico', description: 'Antes de propor uma direção, entender o terreno. Uma leitura conjunta do cenário comercial, dos processos e das pessoas.', actions: ['Ouvir o contexto e os objetivos', 'Mapear o funil e a rotina comercial', 'Identificar obstáculos e oportunidades'], output: 'Um cenário mais claro para decidir.' },
-    { title: 'Planejamento', description: 'Transformar o diagnóstico em prioridades. Definir um caminho possível, conectado ao momento e aos recursos da operação.', actions: ['Alinhar prioridades e responsabilidades', 'Definir objetivos e indicadores', 'Organizar o plano de ação'], output: 'Prioridades traduzidas em próximos passos.' },
-    { title: 'Execução', description: 'Aproximar estratégia e rotina. Mobilizar a equipe e colocar o plano em movimento com comunicação e acompanhamento.', actions: ['Conectar pessoas às responsabilidades', 'Estruturar rotinas de execução', 'Apoiar o desenvolvimento da equipe'], output: 'Ação organizada e responsabilidades claras.' },
-    { title: 'Acompanhamento', description: 'Olhar para o que acontece na prática. Acompanhar sinais do processo e conversar sobre avanços e dificuldades.', actions: ['Revisar indicadores e oportunidades', 'Manter conversas de alinhamento', 'Registrar aprendizados da operação'], output: 'Visibilidade para agir com contexto.' },
-    { title: 'Otimização', description: 'Evoluir a partir do que foi aprendido. Ajustar prioridades e processos sem perder de vista o objetivo acordado.', actions: ['Avaliar o que precisa de ajuste', 'Refinar processos e abordagens', 'Definir o próximo ciclo de evolução'], output: 'Uma operação em melhoria contínua.' },
+    { title: 'Diagnóstico', description: 'O ponto de partida é o seu objetivo. Contextualizar o momento ajuda a formular uma solicitação de crédito com mais clareza.', actions: ['Compartilhar o objetivo', 'Informar um valor aproximado', 'Explicar o momento da necessidade'], output: 'Uma conversa com contexto.' },
+    { title: 'Planejamento', description: 'Organizar as perguntas antes de decidir. Prazo, parcela e custo total fazem parte dessa leitura.', actions: ['Conversar sobre prazos', 'Entender as condições apresentadas', 'Organizar as dúvidas'], output: 'Informações para avaliar o próximo passo.' },
+    { title: 'Execução', description: 'Solicitar uma simulação pelo atendimento. Modalidades, condições e documentação devem ser confirmadas na conversa.', actions: ['Solicitar a simulação', 'Confirmar as informações necessárias', 'Esclarecer as condições aplicáveis'], output: 'Uma solicitação de simulação encaminhada.' },
+    { title: 'Acompanhamento', description: 'Manter as informações alinhadas. O contato pelo WhatsApp permite retomar dúvidas e conversar sobre o andamento.', actions: ['Confirmar o recebimento da solicitação', 'Retomar dúvidas', 'Consultar o próximo passo no atendimento'], output: 'Continuidade na conversa.' },
+    { title: 'Otimização', description: 'Revisitar a solicitação quando o contexto mudar. Uma nova avaliação pode ser necessária diante de outros objetivos ou condições.', actions: ['Atualizar o objetivo, se necessário', 'Reavaliar as informações recebidas', 'Confirmar a decisão com as condições em mãos'], output: 'Uma decisão informada, no seu momento.' },
   ],
   // Preencha value, period e source juntos, com dados reais autorizados.
   indicators: [
@@ -82,21 +81,18 @@ export const profile = {
     { label: 'Desenvolvimento', description: 'Evolução, alinhamento e aprendizado da equipe.', value: null, period: '', source: '' },
   ] satisfies CommercialMetric[],
   specialties: [
-    { title: 'Gestão comercial', text: 'Uma visão integrada de pessoas, processos e oportunidades para orientar o próximo passo.', focus: 'Direção & rotina' },
-    { title: 'Liderança e equipes', text: 'Alinhamento, comunicação e autonomia para construir uma equipe preparada.', focus: 'Alinhamento & desenvolvimento' },
-    { title: 'Metas e planejamento', text: 'Prioridades claras e um plano de ação conectado aos objetivos do negócio.', focus: 'Objetivos & prioridades' },
-    { title: 'Análise de indicadores', text: 'Leitura do que importa para apoiar decisões com mais contexto.', focus: 'Leitura & decisão' },
-    { title: 'Estruturação de processos', text: 'Organização do funil e rotinas comerciais que dão consistência à operação.', focus: 'Funil & consistência' },
-    { title: 'Treinamento comercial', text: 'Desenvolvimento de habilidades para conversas e negociações mais relevantes.', focus: 'Habilidades & negociação' },
+    { title: 'Seu objetivo', text: 'O que você quer realizar? A primeira conversa começa pelo seu momento e pelo que você precisa.', focus: 'CONTEXTO ANTES DA PROPOSTA' },
+    { title: 'Sua simulação', text: 'Solicite informações sobre as possibilidades disponíveis. Prazos, valores e condições devem ser confirmados no atendimento.', focus: 'INFORMAÇÃO PARA AVALIAR' },
+    { title: 'Seu próximo passo', text: 'Com as informações em mãos, esclareça as dúvidas e avalie a decisão. Simulação não significa aprovação garantida.', focus: 'CLAREZA ANTES DE DECIDIR' },
   ],
   cases: [
     { title: 'Uma operação com mais direção.', category: 'Processos e gestão', demo: true, image: null, text: 'Espaço para um projeto de estruturação comercial, com contexto, ações e resultados verificados.', structure: [['Contexto', 'Descrever o cenário inicial e os desafios confirmados.'], ['Atuação', 'Documentar o escopo, as responsabilidades e as ações realizadas.'], ['Evidências', 'Inserir resultados com fonte, período e autorização.']] },
     { title: 'Pessoas que evoluem juntas.', category: 'Liderança e equipes', demo: true, image: null, text: 'Espaço para uma experiência de desenvolvimento de equipe e seus aprendizados.', structure: [['Contexto', 'Apresentar a equipe e as necessidades identificadas, com autorização.'], ['Atuação', 'Descrever as iniciativas de alinhamento e desenvolvimento.'], ['Evidências', 'Adicionar aprendizados documentados e retornos autorizados.']] },
   ] satisfies PortfolioProject[],
   faqs: [
-    ['Como podemos começar uma conversa?', 'Use os canais da seção de contato quando estiverem configurados. O primeiro passo será entender o contexto, os desafios e os objetivos da sua operação.'],
-    ['Quais são as formas de atuação?', 'O formato será definido com Marcus Vinicius conforme o escopo e a disponibilidade. As áreas apresentadas neste site são propostas iniciais e precisam de confirmação.'],
-    ['O trabalho pode ser realizado remotamente?', 'A disponibilidade para atuação remota ou presencial ainda será confirmada. Localidade, frequência e formato serão alinhados antes de qualquer contratação.'],
-    ['Como são definidos os resultados de um projeto?', 'Os objetivos, indicadores e critérios de acompanhamento devem ser acordados no diagnóstico, de acordo com a realidade de cada negócio.'],
+    ['Como solicito uma simulação?', 'Use o botão de simulação ou o formulário para preparar uma mensagem ao WhatsApp de Marcus. Conte seu objetivo e confirme o envio no aplicativo.'],
+    ['Uma simulação garante aprovação?', 'Não. A simulação é uma etapa informativa. Disponibilidade, condições e eventual aprovação dependem de análise e devem ser confirmadas no atendimento.'],
+    ['Quais modalidades de crédito estão disponíveis?', 'As modalidades, instituições e condições disponíveis precisam ser confirmadas diretamente com Marcus. O site não apresenta uma lista de produtos sem essa confirmação.'],
+    ['O que devo informar no primeiro contato?', 'Compartilhe seu objetivo, o valor aproximado que procura e suas principais dúvidas. Os próximos passos e as informações necessárias serão alinhados no atendimento.'],
   ],
 };

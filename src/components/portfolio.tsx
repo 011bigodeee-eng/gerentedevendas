@@ -15,7 +15,7 @@ export default function Portfolio() {
 
   return <div className="portfolio-workspace">
     <div className="portfolio-toolbar"><div className="portfolio-filters" role="group" aria-label="Filtrar projetos por área">{categories.map(item => <button key={item} aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}</div><p role="status" aria-live="polite">{visible.length} {visible.length === 1 ? 'projeto' : 'projetos'}</p></div>
-    <div className="project-grid">{visible.map(project => <motion.article className="project" key={project.title} initial={false} whileInView={reduced ? undefined : { opacity: [.15, 1], y: [30, 0] }} viewport={{ once: false, amount: .12 }} transition={{ duration: .8 }}>
+    <div className="project-grid">{visible.map(project => <motion.article className="project" key={project.title} initial={false} whileInView={reduced ? undefined : { opacity: [.6, 1], y: [18, 0] }} viewport={{ once: true, amount: .12 }} transition={{ duration: .8 }}>
       <div className={`project-visual visual-${projects.indexOf(project) % 2}`}>
         {project.image ? <Image quality={90} src={project.image} alt={`Projeto: ${project.title}`} fill sizes="(max-width: 760px) 88vw, 43vw" style={{ objectFit: 'cover' }} /> : <div aria-hidden="true">{projects.indexOf(project) % 2 === 0 ? <div className="diagram"><i /><i /><i /><i /><i /></div> : <div className="circles"><i /><i /><i /></div>}</div>}
         <span className="demo-badge">{project.demo ? 'DEMONSTRAÇÃO DE LAYOUT' : 'PROJETO PROFISSIONAL'}</span><span className="project-index">0{projects.indexOf(project) + 1}</span>

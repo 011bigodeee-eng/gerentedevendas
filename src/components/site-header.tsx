@@ -5,8 +5,8 @@ import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { profile } from '@/data/profile';
 
 const links = [
-  ['Sobre', 'sobre'], ['Especialidades', 'especialidades'],
-  ['Metodologia', 'metodologia'], ['Projetos', 'projetos'], ['Galeria', 'galeria'],
+  ['Sobre', 'sobre'], ['Seu objetivo', 'especialidades'],
+  ['Metodologia', 'metodologia'], ['Informações', 'projetos'], ['Galeria', 'galeria'],
 ];
 
 export default function SiteHeader({ onSimulation }: { onSimulation: () => void }) {
@@ -16,15 +16,23 @@ export default function SiteHeader({ onSimulation }: { onSimulation: () => void 
   const toggle = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-      if (visible[0]) setActive(visible[0].target.id);
-    }, { rootMargin: '-18% 0px -60% 0px', threshold: 0 });
-    ['inicio', ...links.map(([, id]) => id), 'contato'].forEach(id => {
-      const section = document.getElementById(id);
-      if (section) observer.observe(section);
-    });
-    return () => observer.disconnect();
+    let observer: IntersectionObserver;
+    const observeSections = () => {
+      observer?.disconnect();
+      const top = Math.min(150, Math.round(window.innerHeight * .2));
+      const bottom = Math.max(0, window.innerHeight - top - 140);
+      observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActive(visible[0].target.id);
+      }, { rootMargin: `-${top}px 0px -${bottom}px 0px`, threshold: 0 });
+      ['inicio', ...links.map(([, id]) => id), 'contato'].forEach(id => {
+        const section = document.getElementById(id);
+        if (section) observer.observe(section);
+      });
+    };
+    observeSections();
+    window.addEventListener('resize', observeSections);
+    return () => { observer.disconnect(); window.removeEventListener('resize', observeSections); };
   }, []);
 
   useEffect(() => {

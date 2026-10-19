@@ -58,11 +58,11 @@ export default function CinematicIntro() {
       <div className="intro-grain" aria-hidden="true" />
       <div className="intro-lightfield" aria-hidden="true">{Array.from({ length: 18 }, (_, i) => <i key={i} style={{ '--i': i } as React.CSSProperties} />)}</div>
       <div className="intro-stage" aria-hidden="true">
-        <div className="intro-overline">UMA VISÃO. UM NOVO MOVIMENTO.</div>
+        <div className="intro-overline">UMA CONVERSA. NOVAS POSSIBILIDADES.</div>
         <div className="intro-monogram"><span>M</span><span>V</span><i /></div>
         <div className="intro-identity"><strong>{profile.name}</strong><span>{profile.role}</span></div>
         <div className="intro-rule" />
-        <p>ESTRATÉGIA QUE MOVE RESULTADOS.</p>
+        <p>SEU PRÓXIMO PASSO COMEÇA COM CLAREZA.</p>
       </div>
       <span className="intro-edition" aria-hidden="true">MV / APRESENTA</span>
       <button ref={skipRef} className="intro-skip" onClick={finish}>Pular abertura <ArrowRight size={15} /><X size={13} /></button>

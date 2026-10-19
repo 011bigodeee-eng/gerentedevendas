@@ -1,0 +1,151 @@
+/* More editorial breathing room and fewer repeated card surfaces. */
+.section h2 { font-size: clamp(36px, 3.55vw, 58px); letter-spacing: -2px; line-height: 1.12; }
+.section-heading { margin-bottom: 55px; }
+.section-heading > p { font-size: 16px; line-height: 1.9; max-width: 440px; }
+.eyebrow { font-size: 11px; letter-spacing: 1.8px; line-height: 1.7; }
+.text-link { font-size: 14px; min-height: 44px; }
+.executive-link { font-size: 12px; }
+.executive-index { font-size: 10px; }
+.executive-identity > span { font-size: 9px; letter-spacing: 1.6px; }
+.executive-cta small { font-size: 9px; }
+.executive-cta strong { font-size: 14px; }
+.hero h1 { text-wrap: balance; }
+.hero-content > p { font-size: 16px; }
+.art-top { font-size: 10px; letter-spacing: 1.3px; }
+.art-caption { font-size: 13px; }
+.art-coordinate { font-size: 10px; letter-spacing: 1.1px; }
+.hero-bottom { font-size: 11px; letter-spacing: 1.2px; }
+.credit-proof > span, .credit-proof > a { font-size: 14px; }
+.editorial-kicker { display: block; color: #b3c8e5; font-size: 12px; letter-spacing: 1.7px; margin-bottom: 25px; line-height: 1.7; }
+.about-editorial .editorial-lead { font-size: 21px; line-height: 1.7; color: #d4e0f0; margin-top: 30px; max-width: 670px; }
+.about-editorial .about-text > p:not(.editorial-lead) { font-size: 16px; line-height: 1.9; max-width: 620px; }
+.about-editorial .values { margin-block: 32px; gap: 20px; }
+.about-editorial .values > span { font-size: 13px; }
+.recognition-editorial { border-block: 1px solid var(--line); background: radial-gradient(ellipse at 80% 50%, #21467222, transparent 60%), #08162b; grid-template-columns: 1fr 1.1fr; gap: 8%; }
+.recognition-story > svg { color: var(--accent); margin-bottom: 26px; }
+.recognition-story .recognition-award { font-size: 23px; line-height: 1.5; color: #e4edf9; margin-top: 28px; }
+.recognition-story > p:not(.recognition-award) { font-size: 16px; line-height: 1.9; max-width: 510px; }
+.recognition-dateline { display: grid; gap: 12px; border-block: 1px solid var(--line); padding: 23px 0; margin: 30px 0 23px; }
+.recognition-dateline > span { font-size: 11px; letter-spacing: 1.5px; color: #acc0dc; }
+.recognition-dateline > strong { font-size: 18px; font-weight: 500; }
+.recognition-art figure { margin: 0; padding: 25px; border: 1px solid #8bb8ff22; border-radius: 28px; background: linear-gradient(140deg, #18304d, #0a1728); box-shadow: 0 30px 60px #0003; }
+.recognition-art-label { display: flex; justify-content: space-between; gap: 20px; color: #b5c8e1; font-size: 10px; letter-spacing: 1.3px; margin-bottom: 22px; }
+.recognition-art img { display: block; width: 100%; max-width: 640px; height: auto; margin-inline: auto; border-radius: 18px; }
+.recognition-art figcaption { font-size: 12px; line-height: 1.7; color: #b3c4dc; padding: 20px 0 0; }
+.credit-editorial { background: radial-gradient(ellipse at 0 60%, #1c3d6312, transparent 65%); }
+.credit-path { display: grid; grid-template-columns: 1.15fr 1fr; gap: 10%; align-items: center; }
+.credit-path-row { display: grid; grid-template-columns: 54px 1fr; gap: 18px; padding: 34px 0; border-top: 1px solid var(--line); }
+.credit-path-row:last-child { border-bottom: 1px solid var(--line); }
+.credit-path-number { color: #a7caff; font-size: 20px; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
+.credit-path-row .tiny-label { font-size: 10px; line-height: 1.7; letter-spacing: 1.5px; }
+.credit-path-row h3 { font-size: clamp(28px, 2.2vw, 39px); font-weight: 500; letter-spacing: -1px; margin: 13px 0 18px; }
+.credit-path-row p { font-size: 16px; line-height: 1.8; max-width: 510px; }
+.credit-path-row a { margin-top: 14px; }
+.credit-path-photo figure { position: relative; margin: 0 auto; max-width: 480px; border-radius: 24px; overflow: hidden; background: var(--panel); border: 1px solid #8bb8ff25; box-shadow: 0 24px 60px #0003; }
+.credit-path-photo img { display: block; width: 100%; height: auto; }
+.credit-path-photo figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 90px 28px 30px; background: linear-gradient(transparent, #061021ed); display: grid; gap: 14px; }
+.credit-path-photo figcaption > span { font-size: 10px; letter-spacing: 2px; color: #c0d1e9; }
+.credit-path-photo figcaption > strong { font-size: 25px; line-height: 1.25; font-weight: 500; letter-spacing: -.5px; }
+.credit-questions { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; margin-top: 80px; padding-top: 50px; border-top: 1px solid var(--line); }
+.credit-questions .tiny-label { font-size: 11px; }
+.credit-questions h3 { font-size: 28px; line-height: 1.2; margin-top: 20px; letter-spacing: -1px; }
+.credit-question summary { min-height: 75px; font-size: 16px; align-items: center; }
+.credit-question summary > span { font-size: 13px; color: var(--accent); }
+.credit-question summary > svg { margin-left: auto; color: var(--accent); flex-shrink: 0; }
+.credit-question > div { padding: 0 0 25px 30px; }
+.credit-question strong { font-size: 16px; line-height: 1.8; color: #d8e3f2; font-weight: 500; }
+.credit-question p { font-size: 15px; line-height: 1.9; margin: 14px 0; max-width: 610px; }
+.method .section-intro { font-size: 16px; line-height: 1.9; max-width: 650px; }
+.method-tabs button { font-size: 13px !important; }
+.method-copy > p, .method-copy li { font-size: 15px; line-height: 1.9; }
+.method-copy .tiny-label, .method-deliverable > span { font-size: 11px; line-height: 1.7; }
+.method-deliverable strong { font-size: 17px; }
+.method-navigation button { font-size: 13px; }
+.method-navigation > span { font-size: 10px; }
+.method-disclaimer { font-size: 12px; line-height: 1.8; }
+.gallery-editorial .photo-gallery { gap: 28px; }
+.gallery-editorial .photo-gallery > div:nth-child(even) { padding-top: 55px; }
+.gallery-editorial .gallery-image img { object-fit: contain; }
+.gallery-editorial figcaption { font-size: 14px; line-height: 1.8; padding-block: 18px; }
+.gallery-editorial .gallery-image { background: #08162b; box-shadow: 0 20px 45px #0002; }
+.gallery-editorial .gallery-image:hover img { transform: none; }
+.further-reading { border-block: 1px solid var(--line); }
+.editorial-disclosure { border-block: 1px solid var(--line); margin-top: 18px; }
+.editorial-disclosure > summary { min-height: 105px; padding: 25px 12px; align-items: center; font-size: 20px; gap: 30px; line-height: 1.4; }
+.editorial-disclosure > summary small { display: block; font-size: 10px; letter-spacing: 1.5px; color: #a8bfde; margin-bottom: 12px; line-height: 1.8; }
+.editorial-disclosure > summary svg { flex-shrink: 0; }
+.disclosure-content { padding: 25px 0 40px; }
+.disclosure-content .project-info p, .disclosure-content .project-details dd { font-size: 14px; line-height: 1.9; }
+.disclosure-content .metric-card p { font-size: 14px; line-height: 1.8; }
+.disclosure-content .demo-chart-note, .disclosure-content .metric-foot { font-size: 12px; }
+.disclosure-content .metric-heading span { font-size: 9px; }
+.disclosure-content .chart-data table { font-size: 13px; }
+.faq summary { font-size: 16px; line-height: 1.6; }
+.faq details > p { font-size: 15px; line-height: 1.9; }
+.contact-editorial { background: radial-gradient(ellipse at 0 80%, #2e578a25, transparent 60%), #0a1930; }
+.contact-editorial h2 { font-size: clamp(38px, 3.5vw, 58px); }
+.contact-editorial > div > p { font-size: 16px; max-width: 450px; line-height: 1.9; }
+.contact-editorial .button { font-size: 14px; margin-top: 30px; padding: 19px 23px; }
+.contact-editorial .contact-caption { font-size: 13px; margin-top: 20px; }
+.form-container .form-introduction { font-size: 14px; line-height: 1.8; margin: -10px 0 27px; }
+.form-container label { font-size: 14px; }
+.form-container input, .form-container textarea, .form-container select { font-size: 16px; }
+.form-container .form-note { font-size: 12px; line-height: 1.8; }
+.form-container .button { margin-top: 0; }
+footer > p, footer > a:not(.brand), .footer-bottom { font-size: 12px; line-height: 1.8; }
+@media (min-width: 761px) and (max-width: 1120px) {
+  .method .method-tabs button { flex-wrap: wrap; align-content: center; min-height: 114px; font-size: 12px !important; }
+  .credit-path { gap: 6%; }
+  .credit-path-row { grid-template-columns: 35px 1fr; gap: 10px; }
+  .credit-path-row p { font-size: 14px; }
+  .recognition-editorial { gap: 6%; }
+  .recognition-art figure { padding: 18px; }
+}
+@media (min-width: 1081px) and (max-width: 1280px) {
+  .executive-link { font-size: 11px; padding-inline: 9px; }
+  .executive-cta { gap: 12px; padding-inline: 12px; }
+}
+@media (max-width: 760px) {
+  .section h2 { font-size: clamp(32px, 8.6vw, 38px); letter-spacing: -1.5px; }
+  .section-heading { margin-bottom: 35px; }
+  .section-heading > p { font-size: 15px; }
+  .eyebrow { font-size: 10px; letter-spacing: 1.5px; }
+  .art-top, .art-coordinate { font-size: 8px; }
+  .art-coordinate { letter-spacing: .8px; }
+  .art-caption { font-size: 12px; }
+  .hero-bottom { font-size: 9px; letter-spacing: .8px; }
+  .hero-content > p { font-size: 15px; }
+  .editorial-kicker { font-size: 11px; }
+  .about-editorial .editorial-lead { font-size: 19px; }
+  .recognition-editorial { grid-template-columns: 1fr; gap: 38px; }
+  .recognition-art figure { padding: 18px; border-radius: 22px; }
+  .recognition-art-label { font-size: 9px; gap: 12px; }
+  .recognition-story .recognition-award { font-size: 21px; }
+  .credit-path { grid-template-columns: 1fr; gap: 40px; }
+  .credit-path-row { grid-template-columns: 35px 1fr; gap: 12px; padding-block: 30px; }
+  .credit-path-row h3 { font-size: 31px; }
+  .credit-path-row p { font-size: 15px; }
+  .credit-path-row .tiny-label { font-size: 9px; }
+  .credit-path-photo figure { max-width: 400px; }
+  .credit-path-photo figcaption > strong { font-size: 24px; }
+  .credit-questions { grid-template-columns: 1fr; gap: 22px; margin-top: 55px; padding-top: 35px; }
+  .credit-questions h3 { font-size: 26px; }
+  .credit-question summary { font-size: 15px; gap: 14px; }
+  .credit-question > div { padding-left: 23px; }
+  .method-tabs button { font-size: 14px !important; }
+  .method-copy > p, .method-copy li { font-size: 14px; }
+  .method-copy .tiny-label { font-size: 10px; }
+  .method-navigation button { font-size: 12px; }
+  .gallery-editorial .photo-gallery { gap: 17px; }
+  .gallery-editorial .photo-gallery > div:nth-child(even) { padding-top: 28px; }
+  .gallery-editorial figcaption { font-size: 12px; gap: 8px; }
+  .editorial-disclosure > summary { font-size: 17px; padding: 22px 0; gap: 20px; }
+  .editorial-disclosure > summary small { font-size: 9px; letter-spacing: 1.2px; }
+  .faq summary { font-size: 15px; }
+  .contact-editorial h2 { font-size: clamp(35px, 8.8vw, 42px); }
+  .contact-editorial .button { font-size: 13px; }
+  .executive-link { font-size: 17px; }
+  .executive-index { font-size: 11px; }
+  .executive-identity > span { font-size: 8px; letter-spacing: 1px; }
+}
+@media (max-width: 360px) { .executive-identity > span { display: none; } }
