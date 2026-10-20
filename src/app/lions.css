@@ -8,9 +8,9 @@
 .lions-copy .button { margin-top: 16px; }
 .lions-feature-photo { display: block; width: min(100%, 420px); justify-self: center; transition: border-color .2s; }
 .lions-feature-photo:hover { border-color: #e1c38f; }
-/* Fit the complete portrait inside the circle, including all four corners. */
-.lions-feature-photo, .lions-photo-circle { aspect-ratio: 1; border: 1px solid #d7b67980; border-radius: 50%; overflow: hidden; background: radial-gradient(circle, #193451, #0b1b32 75%); }
-.lions-feature-photo img, .lions-photo-circle img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 6.5% 25.5%; }
+/* Keep the complete portrait visible inside the square frame. */
+.lions-feature-photo, .lions-photo-frame { aspect-ratio: 1; border: 1px solid #d7b67980; border-radius: 0; overflow: hidden; background: radial-gradient(circle, #193451, #0b1b32 75%); }
+.lions-feature-photo img, .lions-photo-frame img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 12px; }
 .lions-page { background: radial-gradient(ellipse at 15% 30%, #19345166, transparent 55%), var(--bg); min-height: 100vh; }
 .lions-page-header { position: static; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px 6%; border-bottom: 1px solid #d7b67930; }
 .lions-home { display: grid; gap: 8px; font-weight: 650; letter-spacing: .04em; }
