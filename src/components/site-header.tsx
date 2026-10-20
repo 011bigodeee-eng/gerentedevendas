@@ -57,7 +57,6 @@ export default function SiteHeader({ onSimulation }: { onSimulation: () => void 
       {links.map(([label, id], index) => <a key={id} href={`#${id}`} className="executive-link" aria-current={active === id ? 'location' : undefined} onClick={() => { setActive(id); setOpen(false); }}>
         <span className="executive-index" aria-hidden="true">0{index + 1}</span><span>{label}</span><ArrowUpRight size={16} className="nav-mobile-arrow" aria-hidden="true" />
       </a>)}
-      <a href="/equipe-lions" className="executive-link"><span className="executive-index" aria-hidden="true">06</span><span>Equipe Lions</span><ArrowUpRight size={16} className="nav-mobile-arrow" aria-hidden="true" /></a>
       <a href="#contato" className="executive-cta" onClick={() => { onSimulation(); setOpen(false); }}><span><small>SEU PRÓXIMO PASSO</small><strong>Simular crédito</strong></span><span className="executive-cta-arrow"><ArrowUpRight size={20} aria-hidden="true" /></span></a>
     </nav>
     <button ref={toggle} className="executive-toggle" aria-label={open ? 'Fechar menu' : 'Abrir menu'} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}><span>{open ? 'Fechar' : 'Menu'}</span>{open ? <X size={20} /> : <Menu size={20} />}</button>
