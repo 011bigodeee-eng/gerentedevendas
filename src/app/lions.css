@@ -6,9 +6,11 @@
 .lions-copy em { color: #e1c38f; }
 .lions-copy p { max-width: 540px; color: var(--muted); line-height: 1.85; margin-block: 24px; }
 .lions-copy .button { margin-top: 16px; }
-.lions-feature-photo { display: block; width: min(100%, 340px); justify-self: center; border: 1px solid #d7b67950; padding: 10px; border-radius: 14px; background: #0b1b32; transition: border-color .2s; }
+.lions-feature-photo { display: block; width: min(100%, 420px); justify-self: center; transition: border-color .2s; }
 .lions-feature-photo:hover { border-color: #e1c38f; }
-.lions-feature-photo img, .lions-full-photo img { display: block; width: 100%; height: auto; border-radius: 5px; }
+/* Fit the complete portrait inside the circle, including all four corners. */
+.lions-feature-photo, .lions-photo-circle { aspect-ratio: 1; border: 1px solid #d7b67980; border-radius: 50%; overflow: hidden; background: radial-gradient(circle, #193451, #0b1b32 75%); }
+.lions-feature-photo img, .lions-photo-circle img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 6.5% 25.5%; }
 .lions-page { background: radial-gradient(ellipse at 15% 30%, #19345166, transparent 55%), var(--bg); min-height: 100vh; }
 .lions-page-header { position: static; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px 6%; border-bottom: 1px solid #d7b67930; }
 .lions-home { display: grid; gap: 8px; font-weight: 650; letter-spacing: .04em; }
@@ -18,8 +20,8 @@
 .lions-copy .lions-wordmark { font-size: 12px; letter-spacing: .6em; color: #e1c38f; margin-block: 40px 20px; }
 .lions-copy .lions-lead { color: var(--ink); font-size: clamp(19px, 2vw, 25px); line-height: 1.5; }
 .lions-signature { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; margin-top: 48px; padding-top: 24px; border-top: 1px solid #d7b67940; font-size: 10px; letter-spacing: .15em; color: #e1c38f; }
-.lions-full-photo { margin: 0; padding: 12px; border: 1px solid #d7b67950; border-radius: 12px; background: #0b1b32; }
-.lions-full-photo figcaption { padding: 16px 4px 4px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.lions-full-photo { margin: 0; width: 100%; }
+.lions-full-photo figcaption { text-align: center; padding: 16px 4px 4px; font-size: 12px; color: var(--muted); line-height: 1.6; }
 .lions-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: 32px 6%; border-top: 1px solid #d7b67930; font-size: 12px; color: var(--muted); }
 .lions-footer a { display: inline-flex; align-items: center; gap: 8px; }
 @media (min-width: 1081px) { .executive-header { gap: 18px; } .executive-link { padding-inline: 10px; } }

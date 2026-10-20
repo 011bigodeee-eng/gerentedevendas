@@ -27,7 +27,7 @@ export default function LionsPage() {
         <div className="lions-signature"><span>EQUIPE LIONS</span><span>MARCUS VINICIUS</span></div>
       </div>
       <figure className="lions-full-photo">
-        <Image src="/images/lions/equipe-lions.jpeg" alt="Bandeira da equipe Lions no ambiente de trabalho, com o emblema do leão dourado também exibido na tela de um MacBook" width={720} height={1280} priority sizes="(max-width: 760px) 88vw, (max-width: 1200px) 44vw, 520px" />
+        <div className="lions-photo-circle"><Image src="/images/lions/equipe-lions.jpeg" alt="Bandeira da equipe Lions no ambiente de trabalho, com o emblema do leão dourado também exibido na tela de um MacBook" width={720} height={1280} priority sizes="(max-width: 760px) 88vw, (max-width: 1200px) 44vw, 520px" /></div>
         <figcaption>Equipe Lions · Identidade no ambiente de trabalho.</figcaption>
       </figure>
     </main>
