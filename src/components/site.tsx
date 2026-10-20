@@ -14,6 +14,7 @@ import Reveal from '@/components/reveal';
 import SiteHeader from '@/components/site-header';
 import CreditPath from '@/components/credit-path';
 import RecognitionFeature from '@/components/recognition-feature';
+import LionsFeature from '@/components/lions-feature';
 function Label({ children }: { children: React.ReactNode }) { return <div className="eyebrow"><span />{children}</div>; }
 function ContactForm({ topic, onTopicChange }: { topic: string; onTopicChange: (value: string) => void }) {
  const [status, setStatus] = useState('');
@@ -38,6 +39,7 @@ export default function Site() {
   {profile.about.showTrajectory && <div className="about-trajectory"><div className="trajectory-grid">{profile.about.trajectory.map(item => <div className="trajectory-card" key={item.label}><span className="trajectory-index">{item.label}</span><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></div>}
  </section>
  <RecognitionFeature />
+ <LionsFeature />
  <section className="section credit-editorial" id="especialidades">
   <Reveal className="section-heading"><div><Label>02 / SEU OBJETIVO</Label><h2>Crédito começa<br />com <em>contexto.</em></h2></div><p>Não é preciso ter todas as respostas para começar. Um caminho simples para organizar a conversa antes de decidir.</p></Reveal>
   <CreditPath onChoose={setTopic} />
