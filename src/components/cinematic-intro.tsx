@@ -1,7 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowRight, Play, X } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
+import Image from 'next/image';
 import { profile } from '@/data/profile';
 
 import { INTRO_SESSION_KEY } from '@/lib/intro';
@@ -38,7 +39,7 @@ export default function CinematicIntro() {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     skipRef.current?.focus({ preventScroll: true });
-    const timer = window.setTimeout(finish, 3900);
+    const timer = window.setTimeout(finish, 7200);
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') finish();
       if (event.key === 'Tab') { event.preventDefault(); skipRef.current?.focus({ preventScroll: true }); }
@@ -55,17 +56,36 @@ export default function CinematicIntro() {
   return <>
     {!reduced && <button className="replay-intro" onClick={() => { document.documentElement.setAttribute('data-intro-state', 'playing'); setPlaying(true); }}><Play size={12} /> Rever abertura</button>}
     {playing && <div className={`cinematic-intro${ready ? ' is-playing' : ''}`} role="dialog" aria-modal="true" aria-label={`Abertura de ${profile.name}`}>
-      <div className="intro-grain" aria-hidden="true" />
-      <div className="intro-lightfield" aria-hidden="true">{Array.from({ length: 18 }, (_, i) => <i key={i} style={{ '--i': i } as React.CSSProperties} />)}</div>
-      <div className="intro-stage" aria-hidden="true">
-        <div className="intro-overline">UMA CONVERSA. NOVAS POSSIBILIDADES.</div>
-        <div className="intro-monogram"><span>M</span><span>V</span><i /></div>
-        <div className="intro-identity"><strong>{profile.name}</strong><span>{profile.role}</span></div>
-        <div className="intro-rule" />
-        <p>SEU PRÓXIMO PASSO COMEÇA COM CLAREZA.</p>
+      <div className="mv-film" aria-hidden="true">
+        <div className="mv-film-shot mv-film-shot-one">
+          <Image src="/images/marcos/trabalho-tablet-alta.jpg" alt="" fill priority sizes="100vw" />
+          <span className="mv-shot-caption">01 / PERSPECTIVA</span>
+        </div>
+        <div className="mv-film-shot mv-film-shot-two">
+          <Image src="/images/marcos/retrato-profissional-alta.jpg" alt="" fill sizes="100vw" />
+          <span className="mv-shot-caption">02 / PRESENÇA</span>
+        </div>
+        <div className="mv-film-shot mv-film-shot-three">
+          <Image src={profile.photo} alt="" fill sizes="(max-width: 760px) 100vw, 65vw" />
+        </div>
+        <div className="mv-film-shade" />
+        <div className="mv-film-grain" />
+        <div className="mv-film-beam" />
+        <div className="mv-film-prologue"><span>TODO OBJETIVO TEM UM COMEÇO.</span><p>Toda conquista começa<br />com uma <em>decisão.</em></p><i /></div>
+        <div className="mv-film-intertitle"><span>UM OLHAR À FRENTE.</span><p>Clareza.<br /><em>Direção.</em></p></div>
+        <div className="mv-film-title">
+          <div className="mv-film-credit"><i />UMA NOVA PERSPECTIVA SOBRE CRÉDITO</div>
+          <div className="mv-film-name"><span>Marcus</span><span>Vinicius<span className="mv-film-period">.</span></span></div>
+          <div className="mv-film-role">{profile.role}<span />SOLUÇÕES DE CRÉDITO</div>
+          <p>O seu próximo capítulo<br />começa com uma conversa.</p>
+        </div>
+        <div className="mv-film-seal">MV<span>EST. / CLAREZA & DIREÇÃO</span></div>
+        <div className="mv-film-topline"><span>MV PICTURES <i /> APRESENTA</span><span>UM NOVO CAPÍTULO</span></div>
+        <div className="mv-film-bottomline"><span>MARCUS VINICIUS / EDIÇÃO ORIGINAL</span><span className="mv-film-count"><span>01 — O COMEÇO</span><span>02 — A DIREÇÃO</span><span>03 — O PRÓXIMO PASSO</span></span></div>
+        <div className="mv-film-letterbox mv-film-letterbox-top" />
+        <div className="mv-film-letterbox mv-film-letterbox-bottom" />
       </div>
-      <span className="intro-edition" aria-hidden="true">MV / APRESENTA</span>
-      <button ref={skipRef} className="intro-skip" onClick={finish}>Pular abertura <ArrowRight size={15} /><X size={13} /></button>
+      <button ref={skipRef} className="intro-skip" onClick={finish}>Entrar no site <ArrowRight size={15} aria-hidden="true" /></button>
       <div className="intro-timer" aria-hidden="true" />
     </div>}
   </>;

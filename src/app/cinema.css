@@ -1,0 +1,84 @@
+/* A three-act photographic opening composed specifically for Marcus Vinicius. */
+.cinematic-intro { background: #030912; animation: mv-film-exit .8s 6.4s cubic-bezier(.76, 0, .24, 1) both; }
+.mv-film { position: absolute; inset: 0; overflow: hidden; background: #030912; }
+.mv-film-shot { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.mv-film-shot img { object-fit: cover; object-position: center 30%; filter: saturate(.55) contrast(1.08) brightness(.65); }
+.mv-film-shot-one { animation: mv-shot-one 7.2s linear both; }
+.mv-film-shot-one img { object-position: center 42%; animation: mv-camera-push 3.7s ease-out both; }
+.mv-film-shot-two { animation: mv-shot-two 7.2s linear both; }
+.mv-film-shot-two img { object-position: center 32%; animation: mv-camera-drift 4s 1.9s ease-out both; }
+.mv-film-shot-three { inset: 0 0 0 35%; animation: mv-shot-three 7.2s linear both; }
+.mv-film-shot-three img { object-position: center 20%; filter: saturate(.65) contrast(1.05) brightness(.8); animation: mv-camera-push 5s 3s ease-out both; }
+.mv-film-shade { position: absolute; inset: 0; background: linear-gradient(90deg, #030912f5 3%, #03091290 43%, #03091208 75%), linear-gradient(0deg, #030912e6, transparent 40%, #03091260); }
+.mv-film-grain { position: absolute; inset: 0; opacity: .16; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23grain)' opacity='.4' d='M0 0h180v180H0z'/%3E%3C/svg%3E"); }
+.mv-film-beam { position: absolute; inset: -30% -70%; background: linear-gradient(110deg, transparent 46%, #8bb8ff16 49%, #cce6ff28 50%, transparent 54%); transform: translateX(-40%); animation: mv-light-pass 5.8s .7s ease-in-out both; pointer-events: none; }
+.mv-film-prologue, .mv-film-intertitle { position: absolute; top: 50%; left: 9%; right: 9%; transform: translateY(-50%); }
+.mv-film-prologue { text-align: center; animation: mv-prologue 7.2s both; }
+.mv-film-prologue > span, .mv-film-intertitle > span { display: block; font-size: 9px; letter-spacing: .35em; color: #a8c0d8; margin-bottom: 28px; }
+.mv-film-prologue p { color: #edf4ff; font-size: clamp(28px, 4.1vw, 64px); line-height: 1.22; letter-spacing: -.035em; font-weight: 400; }
+.mv-film-prologue em, .mv-film-intertitle em { color: #a9cfff; }
+.mv-film-prologue i { display: block; height: 1px; width: 60px; margin: 30px auto 0; background: #8bb8ff; transform-origin: center; animation: mv-rule 1.8s ease-out both; }
+.mv-film-intertitle { animation: mv-intertitle 7.2s both; }
+.mv-film-intertitle p { font-size: clamp(52px, 8vw, 130px); line-height: 1; letter-spacing: -.06em; color: #edf4ff; }
+.mv-film-title { position: absolute; left: 9%; top: 50%; transform: translateY(-50%); width: 65%; animation: mv-title 7.2s both; }
+.mv-film-credit { display: flex; align-items: center; gap: 12px; font-size: 8px; letter-spacing: .24em; color: #b9d2ef; margin-bottom: 28px; }
+.mv-film-credit i { width: 24px; height: 1px; background: #8bb8ff; }
+.mv-film-name { font-size: clamp(68px, 10.5vw, 160px); font-weight: 550; line-height: .85; letter-spacing: -.075em; color: #f1f6ff; }
+.mv-film-name > span { display: block; }
+.mv-film-name > span + span { padding-top: 13px; }
+.mv-film-period { color: #8bb8ff; }
+.mv-film-role { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 30px; color: #c2d3e7; text-transform: uppercase; letter-spacing: .2em; font-size: 9px; }
+.mv-film-role > span { width: 22px; height: 1px; background: #6480a0; }
+.mv-film-title > p { color: #b1c4da; font-size: clamp(13px, 1.3vw, 19px); line-height: 1.65; margin-top: 28px; }
+.mv-film-seal { position: absolute; right: 7%; bottom: 17%; color: #d5e6ff; font-size: 32px; letter-spacing: -.1em; animation: mv-title 7.2s both; }
+.mv-film-seal > span { display: block; color: #9bb0c9; font-size: 6px; letter-spacing: .18em; margin-top: 9px; }
+.mv-film-topline, .mv-film-bottomline { position: absolute; left: 5%; right: 5%; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 8px; letter-spacing: .18em; color: #8ba4c1; z-index: 2; }
+.mv-film-topline { top: 30px; }
+.mv-film-topline > span:first-child { display: flex; align-items: center; gap: 12px; }
+.mv-film-topline i { width: 3px; height: 3px; background: #8bb8ff; border-radius: 50%; }
+.mv-film-bottomline { bottom: 30px; right: 250px; }
+.mv-film-count { display: grid; text-align: right; }
+.mv-film-count > span { grid-area: 1 / 1; }
+.mv-film-count > span:first-child { animation: mv-prologue 7.2s both; }
+.mv-film-count > span:nth-child(2) { animation: mv-intertitle 7.2s both; }
+.mv-film-count > span:last-child { animation: mv-title 7.2s both; }
+.mv-film-letterbox { position: absolute; left: 0; right: 0; height: 11%; background: #030912; }
+.mv-film-letterbox-top { top: 0; }
+.mv-film-letterbox-bottom { bottom: 0; }
+.cinematic-intro .intro-skip { z-index: 3; bottom: 18px; font-size: 10px; border-color: #8bb8ff40; border-radius: 2px; min-height: 44px; background: #081422b3; }
+.cinematic-intro .intro-timer { z-index: 4; height: 1px; background: #8bb8ff; animation: intro-progress 7.2s linear both; }
+@keyframes mv-shot-one { 0%, 14% { opacity: 0; } 25%, 37% { opacity: .8; } 46%, 100% { opacity: 0; } }
+@keyframes mv-shot-two { 0%, 30% { opacity: 0; } 40%, 49% { opacity: .9; } 58%, 100% { opacity: 0; } }
+@keyframes mv-shot-three { 0%, 44% { opacity: 0; } 58%, 100% { opacity: 1; } }
+@keyframes mv-camera-push { from { transform: scale(1.12); } to { transform: scale(1); } }
+@keyframes mv-camera-drift { from { transform: scale(1.13) translateX(2%); } to { transform: scale(1.03) translateX(0); } }
+@keyframes mv-light-pass { from { transform: translateX(-40%); } to { transform: translateX(45%); } }
+@keyframes mv-prologue { 0% { opacity: 0; filter: blur(9px); } 12%, 23% { opacity: 1; filter: blur(0); } 32%, 100% { opacity: 0; filter: blur(3px); } }
+@keyframes mv-intertitle { 0%, 28% { opacity: 0; translate: 0 16px; } 36%, 43% { opacity: 1; translate: 0 0; } 51%, 100% { opacity: 0; translate: 0 -12px; } }
+@keyframes mv-title { 0%, 46% { opacity: 0; translate: 0 20px; filter: blur(5px); } 60%, 100% { opacity: 1; translate: 0 0; filter: blur(0); } }
+@keyframes mv-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes mv-film-exit { from { clip-path: inset(0); } to { clip-path: inset(0 0 100%); } }
+@media (max-width: 760px) {
+  .mv-film-shot-three { inset: 0; }
+  .mv-film-shot-three img { object-position: 65% 20%; }
+  .mv-film-shade { background: linear-gradient(0deg, #030912f5 8%, #03091280 52%, #03091220 80%), linear-gradient(90deg, #03091255, transparent); }
+  .mv-film-prologue, .mv-film-intertitle { left: 7%; right: 7%; }
+  .mv-film-title { left: 7%; top: auto; bottom: 20%; transform: none; width: 86%; }
+  .mv-film-name { font-size: clamp(62px, 17vw, 120px); }
+  .mv-film-credit { font-size: 6px; letter-spacing: .18em; margin-bottom: 20px; }
+  .mv-film-role { font-size: 7px; gap: 9px; margin-top: 24px; letter-spacing: .12em; }
+  .mv-film-title > p { margin-top: 20px; }
+  .mv-film-seal { display: none; }
+  .mv-film-topline { top: 22px; font-size: 6px; }
+  .mv-film-topline > span:last-child { letter-spacing: .1em; }
+  .mv-film-bottomline { bottom: 35px; right: auto; font-size: 6px; }
+  .mv-film-count { display: none; }
+  .mv-film-prologue > span, .mv-film-intertitle > span { font-size: 7px; letter-spacing: .2em; }
+  .mv-film-letterbox { height: 12%; }
+}
+@media (max-height: 500px) and (min-width: 761px) {
+  .mv-film-name { font-size: 65px; }
+  .mv-film-credit { margin-bottom: 14px; }
+  .mv-film-role, .mv-film-title > p { margin-top: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .cinematic-intro, .replay-intro { display: none; } }
